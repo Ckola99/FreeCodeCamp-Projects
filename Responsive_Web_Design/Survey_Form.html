@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>JnrNBAregistration</title>
+      <link rel="stylesheet" href="styles.css">
+    </head>
+  <body>
+    <div class="survey">
+    <h1 id="title">JNR NBA CAMP</h1>
+    <p id="description" class="description"><b>Please rate your experience at this year's camp</b>.
+      </p>
+      <form id="survey-form">
+      <fieldset>
+        <label for="Name" id="name-label">Name<input type="text" id="name" required placeholder="first name" ></label>
+        <label for="Surname" id="Surname-label">Surname<input type="text" id="Surname" required placeholder="Surname"></label>
+ <label for="Age" id="number-label">Age<input type="number" id="number" min="13" max="19" placeholder="Age"></label>
+        <label for="email" id="email-label">Email<input type="email" id="email" name="email" required placeholder=" enter valid email address">
+      </fieldset>
+      <fieldset>
+       <label for="Combine">Combine:<select id="dropdown" name="comnine">
+          <option value="">(select one)</option>
+          <option value="1">Combine 1</option>
+          <option value="2">Combine 2</option>
+          <option value="3">Combine 3</option>
+          </select>
+        </label>
+        <label>Did you improve?</label>
+        <label for="rating"><input id="rating" name="skills" class="inline" type="radio" value="barely">Barely</label>
+        <label for="rating"><input id="rating" name="skills" type="radio" class="inline" value="little">A little.</label>
+        <label for="rating"><input id="rating" name="skills" type="radio" class="inline" value="pro">I'm a pro.</label>
+        <label>Which clinics were your favourite?</label>
+        <label for="session"><input type="checkbox" id="session" name="session" class="inline" value="shooting">Shooting clinic</label>
+        <label for="session"><input type="checkbox" id="session" name="session" class="inline" value="Dribble">Dribble clinic</label>
+       <label for="session"><input type="checkbox" id="session" name="session" class="inline" value="Defense" >Defense clinic</label>
+       <label for="suggestion">Anything you wish you had more guidance on?<textarea id="suggestion" name="suggestion" rows="10" cols="5" placeholder="I need guidance on psychology, health..."></textarea></label>
+      </fieldset>
+      <input id="submit" type="Submit" value="Submit">
+     </form>
+    </div>
+  </body>
