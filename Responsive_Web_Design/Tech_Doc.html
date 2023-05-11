@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="stylesheet" href="documentation.css" />
+		<title>DevTools.io</title>
+	</head>
+
+	<body>
+		<nav id="navbar">
+			<header>Solidity</header>
+			<ul>
+				<li>
+					<a
+						class="nav-link"
+						href="#What_is_solidity?"
+					>
+						What is solidity?</a
+					>
+				</li>
+				<li>
+					<a
+						class="nav-link"
+						href="#Getting_started"
+						>Getting started</a
+					>
+				</li>
+				<li>
+					<a
+						class="nav-link"
+						href="#Solidity_syntax_basics"
+						>Solidity syntax basics</a
+					>
+				</li>
+				<li>
+					<a
+						class="nav-link"
+						href="#Hello_World_in_Solidity"
+						>Hello World in Solidity</a
+					>
+				</li>
+				<li>
+					<a
+						class="nav-link"
+						href="#What_can_you_do_with_Solidity?"
+					>
+						What can you do with
+						Solidity?</a
+					>
+				</li>
+				<li>
+					<a
+						class="nav-link"
+						href="#A_simple_example_smart_contract"
+						>A simple example smart
+						contract</a
+					>
+				</li>
+				<li>
+					<a class="nav-link" href="#Reference"
+						>Reference</a
+					>
+				</li>
+			</ul>
+		</nav>
+		<main id="main-doc">
+			<header class="Title">SOLIDITY</header>
+			<section class="main-section" id="What_is_solidity?">
+				<header>What is solidity?</header>
+				<img
+					src="https://intellipaat.com/mediaFiles/2019/02/Solidity-Logo.jpg"
+					alt="solidity icon"
+				/>
+				<article>
+					<p>
+						Solidity is an object-oriented,
+						high-level language for
+						implementing smart contracts.
+						Smart contracts are programs
+						that govern the behavior of
+						accounts within the Ethereum
+						state.
+					</p>
+					<p>
+						Solidity is a curly-bracket
+						language designed to target the
+						Ethereum Virtual Machine (EVM).
+						It is influenced by C++, Python,
+						and JavaScript. You can find
+						more details about which
+						languages Solidity has been
+						inspired by in the language
+						influences section.
+					</p>
+					<p>
+						Solidity is statically typed,
+						supports inheritance, libraries,
+						and complex user-defined types,
+						among other features.
+					</p>
+				</article>
+			</section>
+			<section class="main-section" id="Getting_started">
+				<header>Getting started</header>
+				<article>
+					<ol>
+						<li>
+							Understand the Smart
+							Contract Basics
+						</li>
+						<li>Get to know Solidity</li>
+						<li>
+							Install the Solidity
+							Compiler
+						</li>
+					</ol>
+				</article>
+			</section>
+			<section
+				class="main-section"
+				id="Solidity_syntax_basics"
+			>
+				<header>Solidity syntax basics</header>
+				<article>
+					<p>
+						In this section, we will discuss
+						the Solidity syntax basics. You
+						can use this knowledge to build
+						syntax for writing smart
+						contracts using Solidity. A
+						Solidity source file can contain
+						any number of pragma directives,
+						contract definitions, and import
+						directives. Let's start with a
+						simple example of a Solidity
+						file:
+					</p>
+					<pre>
+						<code>
+							pragma solidity >=0.4.0 &lt;0.6.0;
+							contract SimpleStorage {
+							uint storedData;
+							function set(uint x) public {
+							storedData = x;
+							}
+							function get() public view returns (uint) {
+							return storedData;
+							}
+							}
+													</code>
+					</pre>
+					<p>
+						The first line is a pragma
+						directive that tells the source
+						code is written for Solidity
+						version 0.4.0 and newer versions
+						that don't break functionality,
+						excluding version 0.6.0. The
+						pragma directive is always local
+						to a source file and if you try
+						to import another file, the
+						pragma from the new file will
+						not automatically apply to the
+						importing file. So, if you are
+						creating a pragma for a file
+						that will not compile earlier
+						than version 0.4.0 and it will
+						also not work on a compiler,
+						starting from version 0.5.0,
+						will be written as:
+					</p>
+					<pre>
+						<code>
+							pragma solidity ^0.4.0;
+						</code>
+					</pre>
+					<p>
+						...<a
+							href="https://intellipaat.com/blog/tutorial/blockchain-tutorial/what-is-solidity/?US#:~:text=Solidity%20is%20a%20statically%2Dtyped,an%20authoritative%20record%20of%20transactions."
+						>
+							Continue reading on
+							example</a
+						>
+					</p>
+				</article>
+			</section>
+			<section
+				class="main-section"
+				id="Hello_World_in_Solidity"
+			>
+				<header>Hello World in Solidity</header>
+				<p>
+					Here we will put Solidity in action for
+					writing a program for Hello World.
+				</p>
+				<pre>
+				<code>
+					// SPDX-License-Identifier: MIT
+					// compiler version must be greater than or equal to 0.8.10 and less than 0.9.0
+					pragma solidity ^0.8.10;
+					contract HelloWorld {
+					string public greet = "Hello World!";
+					}
+				</code>
+			</pre>
+			</section>
+			<section
+				class="main-section"
+				id="What_can_you_do_with_Solidity?"
+			>
+				<header>What can you do with Solidity?</header>
+				<article>
+					<p>
+						With Solidity, you can create
+						contracts for uses such as
+						voting, crowdfunding, blind
+						auctions, and multi-signature
+						wallets.
+					</p>
+					<ol class="options">
+						<li>
+							Blind auctions
+							<p>
+								A blind auction
+								is a type of
+								auction where
+								bidders submit
+								their bids
+								without knowing
+								the bids of
+								other
+								participants.
+							</p>
+						</li>
+						<li>
+							Crowdfunding
+							<p>
+								Crowdfunding in
+								Solidity is a
+								process of
+								raising funds
+								for a project or
+								initiative using
+								Solidity
+								contracts on the
+								Ethereum
+								blockchain. The
+								process involves
+								creating a
+								Solidity
+								contract, which
+								contains rules
+								for the
+								crowdfunding
+								campaign, such
+								as a funding
+								goal and a
+								deadline. Users
+								can then send
+								Ether (the
+								native
+								cryptocurrency
+								of the Ethereum
+								blockchain) to
+								the contract to
+								contribute to
+								the campaign.
+							</p>
+						</li>
+						<li>
+							Multi-signature wallets
+							<p>
+								Multi-signature
+								(multisig)
+								wallets in
+								Solidity are
+								smart contracts
+								on the Ethereum
+								blockchain that
+								require multiple
+								parties to sign
+								off on a
+								transaction
+								before it can be
+								executed. This
+								is a security
+								feature designed
+								to protect
+								against the risk
+								of a single user
+								or entity
+								controlling all
+								of the funds in
+								the wallet.
+							</p>
+						</li>
+					</ol>
+				</article>
+			</section>
+			<section
+				class="main-section"
+				id="A_simple_example_smart_contract"
+			>
+				<header>A simple example smart contract</header>
+				<article>
+					<p>
+						Let us begin with a basic
+						example that sets the value of a
+						variable and exposes it for
+						other contracts to access. It is
+						fine if you do not understand
+						everything right now, we will go
+						into more details later.
+					</p>
+					<p class="code-header">
+						Storage Example
+					</p>
+					<pre>
+						<code>
+							// SPDX-License-Identifier: GPL-3.0
+							pragma solidity >=0.4.16 &lt;0.9.0;
+
+							contract SimpleStorage {
+								uint storedData;
+
+								function set(uint x) public {
+								storedData = x;
+								}
+
+								function get() public view returns (uint) {
+								return storedData;
+								}
+							}
+						</code>
+					</pre>
+					<p>
+						The first line tells you that
+						the source code is licensed
+						under the GPL version 3.0.
+						Machine-readable license
+						specifiers are important in a
+						setting where publishing the
+						source code is the default.
+					</p>
+					<p>
+						The next line specifies that the
+						source code is written for
+						Solidity version 0.4.16, or a
+						newer version of the language up
+						to, but not including version
+						0.9.0. This is to ensure that
+						the contract is not compilable
+						with a new (breaking) compiler
+						version, where it could behave
+						differently. Pragmas are common
+						instructions for compilers about
+						how to treat the source code
+						(e.g. pragma once).
+					</p>
+					<p>
+						Read more on this code
+						<a
+							href="https://docs.soliditylang.org/en/v0.8.20/introduction-to-smart-contracts.html#simple-smart-contract"
+							>here</a
+						>.
+					</p>
+					<p class="code-header">
+						Subcurrency Example
+					</p>
+					<p>
+						The following contract
+						implements the simplest form of
+						a cryptocurrency. The contract
+						allows only its creator to
+						create new coins (different
+						issuance schemes are possible).
+						Anyone can send coins to each
+						other without a need for
+						registering with a username and
+						password, all you need is an
+						Ethereum keypair.
+					</p>
+					<pre>
+						<code>
+							// SPDX-License-Identifier: GPL-3.0
+							pragma solidity ^0.8.4;
+
+							contract Coin {
+    							// The keyword "public" makes variables
+							// accessible from other contracts
+							address public minter;
+							mapping(address => uint) public balances;
+
+							// Events allow clients to react to specific
+							// contract changes you declare
+							event Sent(address from, address to, uint amount);
+
+							// Constructor code is only run when the contract
+							// is created
+							constructor() {
+								minter = msg.sender;
+							}
+
+							// Sends an amount of newly created coins to an address
+							// Can only be called by the contract creator
+							function mint(address receiver, uint amount) public {
+								require(msg.sender == minter);
+								balances[receiver] += amount;
+							}
+
+							// Errors allow you to provide information about
+							// why an operation failed. They are returned
+							// to the caller of the function.
+							error InsufficientBalance(uint requested, uint available);
+
+							// Sends an amount of existing coins
+							// from any caller to an address
+							function send(address receiver, uint amount) public {
+								if (amount > balances[msg.sender])
+								revert InsufficientBalance({
+									requested: amount,
+									available: balances[msg.sender]
+								});
+
+								balances[msg.sender] -= amount;
+								balances[receiver] += amount;
+								emit Sent(msg.sender, receiver, amount);
+							}
+						}
+						</code>
+					</pre>
+					<p>
+						Read more into this code
+						<a
+							href="https://docs.soliditylang.org/en/v0.8.20/introduction-to-smart-contracts.html#simple-smart-contract"
+							>here</a
+						>.
+					</p>
+				</article>
+			</section>
+			<section class="main-section" id="Reference">
+				<header>Reference</header>
+				<p>
+					Everything has been sourced from
+					<a
+						href="https://docs.soliditylang.org/en/v0.8.20/"
+						>Soliditylang.org</a
+					>
+				</p>
+				<p>
+					Big thanks to <a
+						href="https://docs.soliditylang.org/en/v0.8.20/"
+						>Soliditylang.org</a
+					> and <a
+					href="https://intellipaat.com/blog/tutorial/blockchain-tutorial/what-is-solidity/?US#:~:text=Solidity%20is%20a%20statically%2Dtyped,an%20authoritative%20record%20of%20transactions."
+					>intellipaat.com</a>
+				</p>
+			</section>
+		</main>
+	</body>
+</html>
