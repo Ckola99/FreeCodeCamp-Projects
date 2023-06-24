@@ -160,7 +160,6 @@ html{
 	align-content: center;
  }
 
-
 #nav-bar ul{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
